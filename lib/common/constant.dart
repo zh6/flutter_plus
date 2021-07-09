@@ -8,9 +8,9 @@ class Constant {
   static const TOKEN = "TOKEN";
   static const USER = "USER";
 
-  static const accesskey = "9k48b671BGzCr7DtOc287qDjW3HRB2";
-  static const OSSAccessKeyId = "LTAI5tP5uNpE1cUZhQ8aPqD8";
-  static const OSSurl = "https://catzh.oss-accelerate.aliyuncs.com/";
+  static const accesskey = "";
+  static const OSSAccessKeyId = "";
+  static const OSSurl = "";
 
 
 

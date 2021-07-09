@@ -1,7 +1,7 @@
 import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_plus/net/base_error.dart';
-import 'package:flutter_plus/route/routes.dart';
+import 'package:flutter_plus/route/router.dart';
 import 'package:flutter_plus/widgets/error_page.dart';
 import 'package:flutter_plus/widgets/page_state.dart';
 import 'package:lottie/lottie.dart';
@@ -51,7 +51,7 @@ class CommonBasePage extends StatelessWidget {
     if (pageState == PageState.error) {
       if (baseError is NeedAuth) {
         Future.delayed(Duration(seconds: 2), () {
-          Routes.navigateTo(Routes.login, replace: true);
+          Flurorouter.navigateTo(Flurorouter.login, replace: true);
         });
       } else {
         return ErrorPage(

@@ -1,11 +1,12 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_plus/common/application.dart';
+
 import '../main.dart';
 import 'handler.dart';
 
 // 定义路由配置类
-class Routes {
+class Flurorouter {
+  static final FluroRouter router = new FluroRouter();
   static String root = "/";
   static String login = "/login";
   static String home = "/home";
@@ -13,8 +14,10 @@ class Routes {
   static String breed = "/breed";
   static String breeddetail = "/breeddetail";
   static String test = "/test";
-
-  static void configureRoutes(FluroRouter router) {
+  static String fooPage = '/';
+  static String barPage = '/bar';
+  static void configureRoutes() {
+    print("哈哈哈$router");
     router.notFoundHandler = Handler(handlerFunc:
         (BuildContext? context, Map<String, List<String>>? params) {
       print("ROUTE WAS NOT FOUND !!!");
@@ -47,12 +50,11 @@ class Routes {
     }
     path = path + query;
     BuildContext context = navigatorKey.currentState!.context;
-    return Application.router!.navigateTo(context, path,
+    return router.navigateTo(context, path,
         transition: TransitionType.native, replace: replace);
   }
 
   //返回页面
   static void pop<T>(BuildContext context, [T? result]) =>
       Navigator.of(context).pop(result);
-
 }

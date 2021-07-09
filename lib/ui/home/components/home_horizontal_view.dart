@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_plus/model/base/home.dart';
+import 'package:flutter_plus/route/router.dart';
 import 'package:flutter_plus/styles/app_colors.dart';
 import 'package:flutter_plus/widgets/cache_image.dart';
 import 'package:flutter_plus/widgets/over_scroll_behavior.dart';
@@ -37,7 +38,9 @@ class HorizontalView extends HookWidget {
                   return AspectRatio(
                     aspectRatio: 3 / 2,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Flurorouter.navigateTo(Flurorouter.test);
+                      },
                       child: Container(
                         decoration: BoxDecoration(
                           boxShadow: [

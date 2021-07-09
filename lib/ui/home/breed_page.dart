@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_plus/model/breed/breed.dart';
 import 'package:flutter_plus/provider/breed_provider.dart';
-import 'package:flutter_plus/route/routes.dart';
+import 'package:flutter_plus/route/router.dart';
 import 'package:flutter_plus/widgets/app_topbar.dart';
 import 'package:flutter_plus/widgets/my_appbar.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -37,7 +37,7 @@ class BreedPage extends HookWidget {
 
           ///子条目的布局样式
           return GestureDetector(
-              onTap: () => Routes.navigateTo(Routes.breeddetail, params: p),
+              onTap: () => Flurorouter.navigateTo(Flurorouter.breeddetail, params: p),
               child: Card(
                 elevation: 0,
                 shape: RoundedRectangleBorder(

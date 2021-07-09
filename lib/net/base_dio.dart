@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
 import 'package:dio_cookie_manager/dio_cookie_manager.dart';
@@ -7,7 +8,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_plus/common/constant.dart';
 import 'package:flutter_plus/net/interceptor/log_interceptor.dart';
 import 'package:flutter_plus/net/interceptor/response_interceptor.dart';
-import 'package:flutter_plus/widgets/page_state.dart';
 
 import 'base_error.dart';
 import 'interceptor/header_interceptor.dart';
@@ -16,13 +16,10 @@ export 'package:dio/dio.dart';
 
 class BaseDio {
   BaseDio._();
-
   static BaseDio? _instance;
-
   static BaseDio getInstance() {
     return _instance ??= BaseDio._();
   }
-
   Dio getDio() {
     final Dio dio = Dio();
     (dio.transformer as DefaultTransformer).jsonDecodeCallback = parseJson;

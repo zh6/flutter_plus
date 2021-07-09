@@ -6,7 +6,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_plus/common/constant.dart';
 import 'package:flutter_plus/net/api_client.dart';
 import 'package:flutter_plus/net/base_dio.dart';
-import 'package:flutter_plus/route/routes.dart';
+import 'package:flutter_plus/route/router.dart';
 import 'package:flutter_plus/styles/app_colors.dart';
 import 'package:flutter_plus/styles/app_spacers.dart';
 import 'components/login_button.dart';
@@ -211,7 +211,7 @@ class LoginPage extends HookWidget {
         if (result.data['state'] == 0) {
           SpUtil.putObject(Constant.USER, result.data['loginUser']);
           SpUtil.putString(Constant.TOKEN, 'Bearer ${result.data['token']}');
-          Routes.navigateTo(Routes.home,replace: true);
+          Flurorouter.navigateTo(Flurorouter.home,replace: true);
         }
       } catch (e) {
         BaseDio.getInstance().getDioError(e);

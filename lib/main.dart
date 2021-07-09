@@ -1,27 +1,22 @@
 import 'dart:io';
 
-import 'package:fluro/fluro.dart';
 import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_plus/route/routes.dart';
+import 'package:flutter_plus/route/router.dart';
 import 'package:flutter_plus/styles/app_colors.dart';
 import 'package:flutter_plus/ui/login_page.dart';
 import 'package:flutter_plus/ui/main_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'common/application.dart';
+
 import 'common/constant.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SpUtil.getInstance();
-
-  /// 引入路由的代码
-  final router = FluroRouter();
-  Routes.configureRoutes(router);
-  Application.router = router;
+  Flurorouter.configureRoutes();
   runApp(
     ProviderScope(
       child: MyApp(),
@@ -65,8 +60,7 @@ class MyApp extends HookWidget {
           // home:MainPage(),
           home: TextUtil.isEmpty(token)?LoginPage(): MainPage(),
         //注册路由
-        onGenerateRoute: Application.router!.generator,
-
+        onGenerateRoute: Flurorouter.router.generator,
         ///初始化loading
         builder: (context, child) => Scaffold(
           ///全局点击空白关闭软键盘

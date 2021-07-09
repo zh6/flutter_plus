@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_plus/model/base/home.dart';
-import 'package:flutter_plus/route/routes.dart';
+import 'package:flutter_plus/route/router.dart';
 import 'package:flutter_plus/styles/app_colors.dart';
 import 'package:flutter_plus/ui/home/components/head_swiper.dart';
 import 'package:flutter_plus/ui/home/components/home_horizontal_view.dart';
@@ -96,7 +96,7 @@ class HomePage extends HookWidget {
             delegate:
                 SliverChildBuilderDelegate((BuildContext context, int index) {
               return GestureDetector(
-                onTap: () =>Routes.navigateTo(Routes.breed),
+                onTap: () =>Flurorouter.navigateTo(Flurorouter.breed),
                 child: CacheImage(
                   url:hotList[index].imgUrl,
                 ),

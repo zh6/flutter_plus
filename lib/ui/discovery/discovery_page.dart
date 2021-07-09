@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_plus/model/moment/moment.dart';
 import 'package:flutter_plus/provider/moment_provider.dart';
-import 'package:flutter_plus/route/routes.dart';
+import 'package:flutter_plus/route/router.dart';
 import 'package:flutter_plus/widgets/app_topbar.dart';
 import 'package:flutter_plus/widgets/my_appbar.dart';
 import 'package:flutter_plus/widgets/refresh.dart';
@@ -49,7 +49,7 @@ class DiscoveryPage extends HookWidget {
                     padding: EdgeInsets.all(10),
                     child: ListTile(
                       onTap: () {
-                        Routes.navigateTo(Routes.test);
+                        Flurorouter.navigateTo(Flurorouter.test);
                       },
                       title: Text(item.content.toString(),
                           maxLines: 1, overflow: TextOverflow.ellipsis),

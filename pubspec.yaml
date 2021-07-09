@@ -1,0 +1,99 @@
+name: flutter_plus
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0-0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: any
+  #  shared_preferences: 2.0.1 #本地存储
+  dio: 4.0.0 #网络请求
+  dio_cookie_manager: ^2.0.0 #网络请求
+  retrofit: any #网络请求
+  logger: any #网络请求
+  permission_handler: 6.1.0 #权限
+  fluro: ^2.0.3 #路由
+  connectivity: 3.0.0  #网络连接
+  connectivity_for_web: 0.4.0 #网络连接
+  flutter_hooks: ^0.16.0-nullsafety.0
+  hooks_riverpod: ^0.14.0
+  pull_to_refresh: 1.6.4-nullsafety.1 #加载刷新
+  freezed_annotation: ^0.14.0 #实体类
+  fluttertoast: ^8.0.3 #toast
+  flutter_card_swipper: 0.4.0 #轮播图
+  flutter_html: ^2.0.0-nullsafety.0 #html
+  multi_image_picker: 4.8.0 #照片多选
+  crypto: 3.0.1 #加密解密
+  flutter_form_builder: ^6.0.0-nullsafety.1
+  customizable_space_bar: ^0.2.0
+  flustars: ^2.0.1 #工具类
+  extended_image: ^4.1.0 #网络图片缓存
+  lottie: ^1.0.1 #json格式的动画
+  transparent_image: 2.0.0 #透明图像
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: any
+  freezed: ^0.14.0
+  retrofit_generator: any
+  json_serializable: ^4.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/images/message/
+    - assets/fonts/
+    #    - assets/images/home.png
+    #    - assets/images/Listview.png
+    #    - assets/images/history.png
+    #    - assets/images/wode.png
+    #    - assets/images/off_home.png
+    #    - assets/images/off_Listview.png
+    #    - assets/images/off_history.png
+    #    - assets/images/off_wode.png
+    #    - assets/images/icon.png
+    #    - assets/images/noComment.png
+    #    - assets/images/icon_accountAbout.png
+    #    - assets/images/icon_accountNumber.png
+    #    - assets/images/icon_accountPassword.png
+    - assets/images/animationImage.gif
+    #    - assets/Teddy.flr
+    #    - assets/button-animation.flr
+    #    - assets/slideout-menu.flr
+    - assets/json/empty.json
+    - assets/json/disconnect.json
+    - assets/json/error.json
+    - assets/json/loading.json
+    - assets/json/loadingYellow.json
+    - assets/json/loading2.json
+    - assets/json/error2.json
+    - assets/json/empty2.json
+    - assets/json/empty3.json

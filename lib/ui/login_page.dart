@@ -199,23 +199,24 @@ class LoginPage extends HookWidget {
 
   void _submit(BuildContext context) async {
     if (_formKey.currentState!.saveAndValidate()) {
+      Flurorouter.navigateTo(Flurorouter.home,replace: true);
       // username: _formKey.currentState.value['email'],
       // password: _formKey.currentState.value['password']);
-      Map<String, dynamic> map = {
-        "authCode": "O0i9",
-        "loginName": "admin",
-        "password": "admin"
-      };
-      try {
-        var result = await ApiClient().login(map);
-        if (result.data['state'] == 0) {
-          SpUtil.putObject(Constant.USER, result.data['loginUser']);
-          SpUtil.putString(Constant.TOKEN, 'Bearer ${result.data['token']}');
-          Flurorouter.navigateTo(Flurorouter.home,replace: true);
-        }
-      } catch (e) {
-        BaseDio.getInstance().getDioError(e);
-      }
+      // Map<String, dynamic> map = {
+      //   "authCode": "O0i9",
+      //   "loginName": "admin",
+      //   "password": "admin"
+      // };
+      // try {
+      //   var result = await ApiClient().login(map);
+      //   if (result.data['state'] == 0) {
+      //     SpUtil.putObject(Constant.USER, result.data['loginUser']);
+      //     SpUtil.putString(Constant.TOKEN, 'Bearer ${result.data['token']}');
+      //     Flurorouter.navigateTo(Flurorouter.home,replace: true);
+      //   }
+      // } catch (e) {
+      //   BaseDio.getInstance().getDioError(e);
+      // }
     }
   }
 }

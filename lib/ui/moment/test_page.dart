@@ -52,7 +52,7 @@ class TestPage extends HookWidget {
                       children: <Widget>[
                         Container(
                           height: 300,
-                          child: HeadSwiper(swiperList:swiperList,),
+                          child: HeadSwiper(swiperList),
                         ),
                         // 商品详情
                         Container(

@@ -8,6 +8,7 @@ import 'package:flutter_plus/ui/home/components/head_swiper.dart';
 import 'package:flutter_plus/ui/home/components/home_horizontal_view.dart';
 import 'package:flutter_plus/widgets/cache_image.dart';
 
+import 'components/home_header.dart';
 import 'components/left_title.dart';
 import 'components/sliver_header.dart';
 
@@ -66,11 +67,10 @@ class HomePage extends HookWidget {
         body: CustomScrollView(
             physics: BouncingScrollPhysics(),
             slivers: <Widget>[
+                  HomeHeader(swiperList),
                   SliverHeader(),
                   SliverToBoxAdapter(
-                    child: HeadSwiper(
-                      swiperList: swiperList,
-                    ),
+                    child: HeadSwiper(swiperList),
                   ),
                   SliverToBoxAdapter(
                     child: HorizontalView(brandList: brandList),
@@ -96,9 +96,9 @@ class HomePage extends HookWidget {
             delegate:
                 SliverChildBuilderDelegate((BuildContext context, int index) {
               return GestureDetector(
-                onTap: () =>Flurorouter.navigateTo(Flurorouter.breed),
+                onTap: () => Flurorouter.navigateTo(Flurorouter.breed),
                 child: CacheImage(
-                  url:hotList[index].imgUrl,
+                  url: hotList[index].imgUrl,
                 ),
               );
             }, childCount: hotList.length),

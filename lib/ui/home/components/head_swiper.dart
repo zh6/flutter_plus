@@ -10,7 +10,7 @@ import 'package:flutter_plus/widgets/cache_image.dart';
 class HeadSwiper extends HookWidget {
   final List<SwiperEntity> swiperList;
 
-  HeadSwiper({Key? key, required this.swiperList}) : super(key: key);
+  HeadSwiper(this.swiperList, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

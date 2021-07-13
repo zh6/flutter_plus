@@ -50,7 +50,7 @@ class MessagePage extends HookWidget {
                       CircleAvatar(
                         radius: 22,
                         backgroundColor: Colors.white,
-                        child: Image.asset('assets/images/message/message.png'),
+                        child: Image.asset('assets/images/message.png'),
                       ),
                       SizedBox(
                         height: 12,
@@ -67,7 +67,7 @@ class MessagePage extends HookWidget {
                       CircleAvatar(
                         radius: 22,
                         backgroundColor: Colors.white,
-                        child: Image.asset('assets/images/message/@me.png'),
+                        child: Image.asset('assets/images/me.png'),
                       ),
                       SizedBox(
                         height: 12,
@@ -84,7 +84,7 @@ class MessagePage extends HookWidget {
                       CircleAvatar(
                         radius: 22,
                         backgroundColor: Colors.white,
-                        child: Image.asset('assets/images/message/loveme.png'),
+                        child: Image.asset('assets/images/loveme.png'),
                       ),
                       SizedBox(
                         height: 12,
@@ -102,7 +102,7 @@ class MessagePage extends HookWidget {
                         radius: 22,
                         backgroundColor: Colors.white,
                         child: Image.asset(
-                            'assets/images/message/system_message.png'),
+                            'assets/images/system_message.png'),
                       ),
                       SizedBox(
                         height: 12,

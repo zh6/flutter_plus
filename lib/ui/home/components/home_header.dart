@@ -12,7 +12,8 @@ import 'package:flutter_plus/ui/home/components/head_swiper.dart';
 class HomeHeader extends HookWidget {
   double _expandedHeigh = 300;
   List<SwiperEntity> swiperList;
-  HomeHeader({Key? key, required this.swiperList}) : super(key: key);
+
+  HomeHeader(this.swiperList, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -83,6 +84,7 @@ class HomeHeader extends HookWidget {
 
   Widget buildSwiper(double shrinkOffset) {
     return Opacity(
-        opacity: 1 - shrinkOffset / _expandedHeigh, child: HeadSwiper(swiperList: swiperList,));
+        opacity: 1 - shrinkOffset / _expandedHeigh,
+        child: HeadSwiper(swiperList));
   }
 }

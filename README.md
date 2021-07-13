@@ -1,6 +1,6 @@
 # flutter_plus
 
-框架主要包括：
+框架核心：
 
 1.hooks_riverpod：状态管理，provider的升级版本，详情自行查看官方文档，上面有介绍对比当前几种主流状态管理框架
 

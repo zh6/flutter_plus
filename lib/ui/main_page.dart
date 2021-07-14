@@ -3,13 +3,25 @@ import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_plus/model/base/tab.dart';
-import 'package:flutter_plus/provider/navigation_provider.dart';
 import 'package:flutter_plus/styles/app_colors.dart';
 import 'package:flutter_plus/ui/personal/personal_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'discovery/discovery_page.dart';
 import 'home/home_page.dart';
 import 'message/message_page.dart';
+
+final navigationProvider =
+    StateNotifierProvider<navigationNotifier, int>((ref) {
+  return navigationNotifier();
+});
+
+class navigationNotifier extends StateNotifier<int> {
+  navigationNotifier() : super(0);
+
+  void selectPage(int index) {
+    state = index;
+  }
+}
 
 class MainPage extends HookWidget {
   final pageList = [

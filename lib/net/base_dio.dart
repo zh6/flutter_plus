@@ -8,7 +8,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_plus/common/constant.dart';
 import 'package:flutter_plus/net/interceptor/log_interceptor.dart';
 import 'package:flutter_plus/net/interceptor/response_interceptor.dart';
-
 import 'base_error.dart';
 import 'interceptor/header_interceptor.dart';
 

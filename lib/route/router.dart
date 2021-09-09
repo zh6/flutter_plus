@@ -17,7 +17,6 @@ class Flurorouter {
   static String fooPage = '/';
   static String barPage = '/bar';
   static void configureRoutes() {
-    print("哈哈哈$router");
     router.notFoundHandler = Handler(handlerFunc:
         (BuildContext? context, Map<String, List<String>>? params) {
       print("ROUTE WAS NOT FOUND !!!");

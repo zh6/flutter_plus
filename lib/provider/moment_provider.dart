@@ -68,7 +68,7 @@ class MomentNotifier extends StateNotifier<MomentState> {
             pageIndex: 2,
           );
           refreshController.refreshCompleted();
-          refreshController.footerMode.value = LoadStatus.canLoading;
+          refreshController.footerMode!.value = LoadStatus.canLoading;
         }
       } else {
         MomentResponse result = await ApiClient().getmoment();

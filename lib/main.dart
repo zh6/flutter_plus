@@ -16,7 +16,7 @@ import 'common/constant.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SpUtil.getInstance();
-  Flurorouter.configureRoutes();
+  Routers.configureRoutes();
   runApp(
     ProviderScope(
       child: MyApp(),
@@ -60,7 +60,7 @@ class MyApp extends HookWidget {
           // home:MainPage(),
           home: TextUtil.isEmpty(token)?LoginPage(): MainPage(),
         //注册路由
-        onGenerateRoute: Flurorouter.router.generator,
+        onGenerateRoute: Routers.router.generator,
         ///初始化loading
         builder: (context, child) => Scaffold(
           ///全局点击空白关闭软键盘

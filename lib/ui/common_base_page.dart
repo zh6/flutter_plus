@@ -51,7 +51,7 @@ class CommonBasePage extends StatelessWidget {
     if (pageState == PageState.error) {
       if (baseError is NeedAuth) {
         Future.delayed(Duration(seconds: 2), () {
-          Flurorouter.navigateTo(Flurorouter.login, replace: true);
+          Routers.navigateTo(Routers.login, replace: true);
         });
       } else {
         return ErrorPage(

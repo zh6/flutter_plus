@@ -5,7 +5,7 @@ import '../main.dart';
 import 'handler.dart';
 
 // 定义路由配置类
-class Flurorouter {
+class Routers {
   static final FluroRouter router = new FluroRouter();
   static String root = "/";
   static String login = "/login";

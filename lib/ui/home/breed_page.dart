@@ -37,7 +37,7 @@ class BreedPage extends HookWidget {
 
           ///子条目的布局样式
           return GestureDetector(
-              onTap: () => Flurorouter.navigateTo(Flurorouter.breeddetail, params: p),
+              onTap: () => Routers.navigateTo(Routers.breeddetail, params: p),
               child: Card(
                 elevation: 0,
                 shape: RoundedRectangleBorder(

@@ -199,7 +199,7 @@ class LoginPage extends HookWidget {
 
   void _submit(BuildContext context) async {
     if (_formKey.currentState!.saveAndValidate()) {
-      Flurorouter.navigateTo(Flurorouter.home,replace: true);
+      Routers.navigateTo(Routers.home,replace: true);
       // username: _formKey.currentState.value['email'],
       // password: _formKey.currentState.value['password']);
       // Map<String, dynamic> map = {

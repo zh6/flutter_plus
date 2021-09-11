@@ -34,7 +34,7 @@ class MomentPage extends HookWidget {
                       padding: EdgeInsets.all(10),
                       child: ListTile(
                         onTap: () {
-                          Flurorouter.navigateTo(Flurorouter.test);
+                          Routers.navigateTo(Routers.test);
                         },
                         title: Text(item.content.toString(),
                             maxLines: 1, overflow: TextOverflow.ellipsis),

@@ -39,7 +39,7 @@ class HorizontalView extends HookWidget {
                     aspectRatio: 3 / 2,
                     child: GestureDetector(
                       onTap: () {
-                        Flurorouter.navigateTo(Flurorouter.test);
+                        Routers.navigateTo(Routers.test);
                       },
                       child: Container(
                         decoration: BoxDecoration(

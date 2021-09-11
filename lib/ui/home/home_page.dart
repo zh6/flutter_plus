@@ -96,7 +96,7 @@ class HomePage extends HookWidget {
             delegate:
                 SliverChildBuilderDelegate((BuildContext context, int index) {
               return GestureDetector(
-                onTap: () => Flurorouter.navigateTo(Flurorouter.breed),
+                onTap: () => Routers.navigateTo(Routers.breed),
                 child: CacheImage(
                   url: hotList[index].imgUrl,
                 ),
